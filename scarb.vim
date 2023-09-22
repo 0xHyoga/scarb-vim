@@ -1,5 +1,5 @@
-" Author: MD <md@gmx.com>,
-" Description: cairoc invoked by scarb for cairo files
+" Author: swan_of_bodom <swan_of_bodom@hotmail.com>,
+" Description: scarb for cairo files
 
 call ale#Set('cairo_scarb_check_all_targets', 0)
 call ale#Set('cairo_scarb_check_examples', 0)
@@ -13,7 +13,7 @@ function! ale_linters#cairo#scarb#GetSierraExecutable(bufnr) abort
     if ale#path#FindNearestFile(a:bufnr, 'Scarb.toml') isnot# ''
         return 'scarb'
     else
-        " if there is no Scarb.toml file, we don't use scarb even if it exists,
+        " if there is no Sierra.toml file, we don't use scarb even if it exists,
         " so we return '', because executable('') apparently always fails
         return ''
     endif
