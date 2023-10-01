@@ -13,7 +13,7 @@ function! ale_linters#cairo#scarb#GetSierraExecutable(bufnr) abort
     if ale#path#FindNearestFile(a:bufnr, 'Scarb.toml') isnot# ''
         return 'scarb'
     else
-        " if there is no Sierra.toml file, we don't use scarb even if it exists,
+        " if there is no Scarb.toml file, we don't use scarb even if it exists,
         " so we return '', because executable('') apparently always fails
         return ''
     endif
